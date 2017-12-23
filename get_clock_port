@@ -1,0 +1,14 @@
+#! /bin/bash
+
+gui="tx"
+
+str=`mapper -u $gui`
+if [ "$str" = "0" ]
+then
+   echo "0"
+   exit 0
+fi
+
+port=`expr $str + 1000`
+echo "$port"
+exit 0

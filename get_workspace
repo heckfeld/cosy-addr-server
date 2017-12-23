@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# setup for local /usr/binPATH
+export PATH=/usr/bin:$PATH
+
+# determine the workspace for this GUI
+
+if [ $# -ne 1 ]
+then
+    echo "usage: get_workspace name"
+    exit 1
+fi
+gui="$1"
+title=$(get_title $gui)
+if [ x"$title" == x0 ]
+then
+    echo "get_workspace $gui: unknown GUI"
+    exit 2
+fi
+workspace=$(wmctrl -d | grep "$title" | cut -c 1)
+if [ x"$workspace" == x ]
+then
+    echo "get_workspace $gui: no such workspace $title"
+    exit 3
+else
+    echo $(expr $workspace + 1)
+fi
+exit 0

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then 
+   echo 0
+   exit 1
+fi
+gui=$1
+
+line=`grep $gui $TCL/conf/guis.conf`
+
+port=`echo "$line" | cut -d\  -f2 `
+if [ -n "$port" ]
+then
+  echo $port
+else
+  echo "0"
+fi

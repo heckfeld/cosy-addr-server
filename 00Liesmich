@@ -1,0 +1,24 @@
+
+Fr 24. Jul 08:41:01 CEST 2015
+	mapper und addr_server wieder getrennt
+	die Umschaltung im Programm macht keinen Sinn
+
+Mo 27. Jul 09:37:50 CEST 2015
+        Befehle des Address Server
+
+        $
+                g       Get Information
+                        c       - Liste aller Verbindungen
+                        l       - Liste aller geoeffnetetn Verbindungen
+			t name	- Titel von "name"
+			d name	- DISPLAY von "name"
+			h name	- HOST von "name"
+		p
+			d name display	- traegt fuer name das DISPLAY ein
+
+		i	get informed
+		c	stop information
+
+	>
+	<	Nachrichtenaustausch zwischen Oberflaechen
+

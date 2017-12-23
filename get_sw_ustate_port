@@ -1,0 +1,13 @@
+#!/bin/bash
+
+gui="sw_tx"
+
+str=`mapper -u $gui`
+if [ "$str" = "0" ]
+then
+   echo "0"
+   exit 0
+fi
+
+echo "$str"
+exit 0
